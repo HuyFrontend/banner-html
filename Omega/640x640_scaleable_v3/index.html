@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>640x640</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="ad.size" content="width=640,height=640">
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Century+Gothic' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <!--JAVASCRIPTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jQueryRotate.js"></script>
+    <script type="text/javascript">
+    var clickTag = "http://www.google.com";
+    </script>
+</head>
+
+<body>
+    <a href="javascript:void(0)" onclick="javascript:window.open(window.clickTag)">
+        <div id="conteneur">
+            <div id="montreGroup" class="montreGroup">
+                <div class="montre2">
+                    <div class="day"></div>
+                    <img src="heures.png" class="heures" />
+                    <img src="minutes.png" class="minutes" />
+                    <img src="secondes.png" class="secondes" />
+                </div>
+            </div>
+            <img src="logo.png" class="logo" />
+            <div id="border"></div>
+        </div>
+    </a>
+    <script>
+    function Resize() {
+        console.log("resize");
+
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || document.body.offsetWidth;
+        var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || document.body.offsetHeight;
+
+        var sizeFixed = 640;
+
+        var banner = document.getElementById("conteneur");
+
+        var bannerW = document.getElementById("conteneur").clientWidth,
+            bannerH = document.getElementById("conteneur").clientHeight;
+
+        var scaleW = ((bannerW * 100) / sizeFixed) / 100,
+            scaleH = ((bannerH * 100) / sizeFixed) / 100;
+
+
+        if (w > h) {
+
+            if (h >= sizeFixed) {
+                document.getElementById("montreGroup").style.transform = "scale(1)";
+                banner.style.width = sizeFixed + 'px';
+                banner.style.height = sizeFixed + 'px';
+            } else {
+
+                banner.style.width = h + 'px';
+                banner.style.height = h + 'px';
+
+                scaleW = ((bannerH * 100) / sizeFixed) / 100;
+                scaleH = ((bannerH * 100) / sizeFixed) / 100;
+
+                document.getElementById("montreGroup").style.transform = "scale(" + scaleW + ")";
+            }
+
+        } else {
+
+            if (w >= sizeFixed) {
+                document.getElementById("montreGroup").style.transform = "scale(1)";
+                banner.style.width = sizeFixed + 'px';
+                banner.style.height = sizeFixed + 'px';
+            } else {
+
+                banner.style.width = w + 'px';
+                banner.style.height = w + 'px';
+
+                scaleW = ((bannerW * 100) / sizeFixed) / 100;
+                scaleH = ((bannerW * 100) / sizeFixed) / 100;
+
+                document.getElementById("montreGroup").style.transform = "scale(" + scaleH + ")";
+            }
+
+        }
+    };
+
+
+    function onResize() {
+        Resize();
+    };
+    window.addEventListener("resize", onResize);
+    window.addEventListener("load", Resize);
+    </script>
+    <script src="logic.js"></script>
+</body>
+
+</html>
