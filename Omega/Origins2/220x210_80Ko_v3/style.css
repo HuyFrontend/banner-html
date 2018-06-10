@@ -1,0 +1,193 @@
+@font-face {
+	font-family: 'CenturyGothicStd';
+    src: url('fonts/CenturyGothicStd.otf') format('opentype'),
+    url('fonts/CenturyGothicStd.ttf') format('truetype'),
+	url('fonts/CenturyGothicStd.woff') format('woff'),
+	url('fonts/CenturyGothicStd.eot') format('eot');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    position: absolute;
+}
+
+a img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+a, a * {
+  outline-style: none;
+  border: none;
+}
+
+#conteneur {
+    overflow: hidden;
+    position: absolute;
+    width: 218px;
+    height: 208px;
+    border: 1px solid #000;
+    background:#FFF;
+}
+
+.montre {
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+#cta {
+    display: block;
+    position: absolute;
+    width: 124px;
+    height: 28px;
+    bottom: -23px;
+    right: 11px;
+    background: #d60d0e;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.cta-text {
+    height: auto;
+    top: 0;
+    left: 0px;
+}
+
+.logo-fin-1 {
+    bottom: 70px;
+    right: 0;
+    opacity: 0;
+}
+
+.logo-fin-2 {
+    bottom: 70px;
+    right: 0;
+    opacity: 0;
+}
+
+.montre2 {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 300px;
+    top: -60px;
+    left: -79px;
+    opacity: 1;
+    -webkit-transform: scale(0.33);
+    -moz-transform: scale(0.33);
+    -ms-transform: scale(0.33);
+    transform: scale(0.33);
+}
+
+.truc-1,
+.truc-2,
+.truc-3,
+.truc-4,
+.truc-5,
+.truc-6,
+.truc-7,
+.truc-8,
+.truc-9,
+.truc-10,
+.truc-11,
+.truc-12 {
+    opacity: 0;
+}
+
+.day {
+    position: absolute;
+    display: block;
+    width: 4.8%;
+    height: 7%;
+    top: 79%;
+    left: 47%;
+    font-size: 13px;
+    color: #000000;
+    line-height: 17px;
+    text-align: center;
+    font-weight: 700;
+    opacity: 1;
+    font-family: 'CenturyGothicStd', Arial, Helvetica, sans-serif;
+    font-weight: normal; 
+    font-style: normal;
+}
+
+.heures,
+.minutes,
+.secondes2 {
+    -webkit-transform-origin: 150px 150px !important;
+    -moz-transform-origin: 150px 150px !important;
+    -ms-transform-origin: 150px 150px !important;
+    transform-origin: 150px 150px !important;
+}
+
+.secondes {
+    opacity: 0;
+    display: none;
+}
+
+.bg {
+    width: 218px;
+    height: 208px;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    display: block;
+    position: absolute;
+    width: 88px;
+    height: 39px;
+    top: 272px;
+    left: 105px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.logo-deb-2 {
+    width: 282px;
+    height: 39px;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+#logo-ar {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+}
+
+button,
+.buttons {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0px;
+}
+#exit{
+    cursor:pointer;
+    z-index:9998;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 220px;
+    height: 210px;
+}
